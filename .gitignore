@@ -1,0 +1,9 @@
+venv/
+.venv/
+env/
+.env/
+rauchu_venv/
+.rauchu_venv/
+rauchu_venv/
+__pycache__/
+*.pyc
