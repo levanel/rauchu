@@ -2,9 +2,7 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from pymongo import MongoClient
 import os
-#QfYu85CaXsrXpOzb
 app =  FastAPI()
-
 client = MongoClient(os.getenv("MONGO_URI"))
 
 db= client.project_db
