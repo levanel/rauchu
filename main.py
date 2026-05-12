@@ -1,10 +1,12 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from pymongo import MongoClient
+import os
 #QfYu85CaXsrXpOzb
 app =  FastAPI()
 
-client = MongoClient("mongodb+srv://rauchu67_db_user:0YYDY9JFUcymGmOa@cluster0.3q8nxce.mongodb.net/?appName=Cluster0")
+client = MongoClient(os.getenv("MONGO_URI"))
+
 db= client.project_db
 task_collection = db.tasks
 
